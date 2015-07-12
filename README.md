@@ -2,7 +2,7 @@
 ## About
 This is a documentation repository which documents the various API endpoints. 
 
-This API supports IPv4 and IPv6.
+This API supports IPv4 and IPv6, as well as SPDY/2.
 
 ## Base URL
 * https://api.kuggleland.com
