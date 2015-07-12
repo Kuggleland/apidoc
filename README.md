@@ -24,4 +24,4 @@ There is a key called *'meta'* which returns two attributes - *'code'* and *'msg
 
 ## Endpoints
 
-* **register** (https://api.kuggleland.com/1/ | Allowed methods: POST) . Accepts a 'phonenumber' or 'phonenumber' and 'pin' or 'fbtoken'. On success it will return a 200 OK response. If a PIN is verified it will return a 'token' which is to be used for identifying yourself with other web service.
+* **register** (https://api.kuggleland.com/1/register | Allowed methods: POST) . Accepts a 'phonenumber' or 'phonenumber' and 'pin' or 'fbtoken'. On success it will return a 200 OK response. If a PIN is verified it will return a 'token' which is to be used for identifying yourself with other web service.
