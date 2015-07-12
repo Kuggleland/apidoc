@@ -1,20 +1,28 @@
 # Kuggle API documentation
 ## About
-This is a documentation repository which documents the various API endpoints
+This is a documentation repository which documents the various API endpoints. 
+
+This API supports IPv4 and IPv6.
 
 ## Base URL
 * http://api.kuggleland.com
-* https://api.kuggleland.com (Comming soon!)
+* https://api.kuggleland.com (Comming soon! Recommended)
 
 ## Versions
 Currently there is only 1 version of the API
 
-## Endpoings
+## Example Call
 
+* http://api.kuggleland.com/1/ (This is the service discovery URL which shows you what endpoints is available)
 
-| Functionality | Endpoint name | Parameters | Comments |
+## Reading Error messages and codes
+The API will always return a dictionary / hash type. 
 
-| ------------- | ------------- | ------------- |
+There is a key called *'meta'* which returns two attributes - *'code'* and *'msg'*.
 
-| Request a PIN number to a mobile device | register | phonenumber (eg. +15551211234 or +85263006800) | This function validates the phonenumber. |
+* *'code'* is a http style code (which will match the HTTP code returned)
+* *'msg'* is an informational message which is also localized. (Pro-tip: use the Accept-language header)
 
+## Endpoints
+
+* **register** . Accepts a 'phonenumber' or 'phonenumber' and 'pin' or 'fbtoken'. On success it will return a 200 OK response. If a PIN is verified it will return a 'token' which is to be used for identifying yourself with other web service
