@@ -14,6 +14,12 @@ Currently there is only 1 version of the API
 
 * https://api.kuggleland.com/1/ (This is the service discovery URL which shows you what endpoints is available)
 
+## Headers
+There are two headers which you can pass:
+* *'Token'*: This is how you identify yourself as a valid user - for protected endpoints
+* *'Accept-language'*: This is where you define the language. Refer to RFC1766 on how its used. All modern web browsers pass this header.
+
+
 ## Reading Error messages and codes
 The API will always return a dictionary / hash type. 
 
