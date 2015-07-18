@@ -40,5 +40,5 @@ The below is a typical user journey from unauthenticated to authenticated.
 * Make a POST call to the register endpoint (either a 'fbtoken' or 'phonenumber'
 * If 'phonenumber', then make an additional  POST call to the register endpoint with a 'pin'
 * Once you get a token, make a GET call to the profile endpoint to get the persons profile.
-* If the person is already known it will show the profile where you can display it in the user interface, otherwise you will need to make an additional call (this time POST) to profile with the 'firstname', 'gender', and 'dob' (YYYY-MM-DD format). If you registered from facebook, the register endpoint should show this. Why? We'd like to get users to be able update their info just in case facebook data is not correct or incomplete.
-* Once the profile is set up, the access token provided now has full access to the other endpoints on the system.
+* If the person is already known it will show the profile where you can display it in the user interface, otherwise you will need to make an additional call (this time POST) to profile with the 'firstname', 'gender', and 'dob' (YYYY-MM-DD format). If you registered from facebook, the register endpoint should show this and automatically do the profile setup and linking so this step is skipped.
+* Once the profile is set up, the access token provided now has full access to the other endpoints on the system. 
