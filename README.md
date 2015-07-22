@@ -1,4 +1,6 @@
 # Kuggle API documentation
+![kugglejs](https://cloud.githubusercontent.com/assets/83470/8816445/7bcd2826-306a-11e5-96e2-59728b2845ba.png)
+
 ## About
 This is a documentation repository which documents the various API endpoints. 
 
