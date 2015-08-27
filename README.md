@@ -40,6 +40,7 @@ There is a key called *'meta'* which returns two attributes - *'code'* and *'msg
 * **purpose disliking** (https://api.kuggleland.com/1/purpose/PURPOSEID/dislike | Allowed methods: POST). Requires authentication and a profile. No parameters needed.
 * **nearby people** (https://api.kuggleland.com/1/nearby/people | Allowed methods: GET). Requires: 'lat' and 'lng' and optionally a 'distance' in meters which defaults to 5000 if left out.
 * **nearby places** (https://api.kuggleland.com/1/nearby/places | Allowed methods: GET). Requires: 'lat' and 'lng' and optionally a 'distance' in meters which defaults to 5000 if left out.
+* **messages** (https://api.kuggleland.com/1/messages | Allowed methods: GET and POST). Requires Authentication and a user profile. For GET, no parameters needed. Will return all the messages received from different users. For POST, the parameters required is 'to' (recipients user identifier), 'messagetype' (currently only 'text' is supported), and 'text'.
 
 ## Example - User registration
 The below is a typical user journey from unauthenticated to authenticated.
