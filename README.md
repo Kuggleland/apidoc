@@ -35,6 +35,11 @@ There is a key called *'meta'* which returns two attributes - *'code'* and *'msg
 * **register** (https://api.kuggleland.com/1/register | Allowed methods: POST) . Accepts a 'phonenumber' or 'phonenumber' and 'pin' or 'fbtoken'. On success it will return a 200 OK response. If a PIN is verified it will return a 'token' which is to be used for identifying yourself with other web service. If FB token is used, in addition to 'token', there is another attribute called 'fromfb' which contains all the information that is grabbed from facebook
 * **profile** (https://api.kuggleland.com/1/profile | Allowed methods: GET and POST). Requires authentication. GET will show you the users current profile if it exists (this method will also link any tokens to an existing profile too). POST lets you create or update a new profile. The accepted fields are 'firstname', 'gender' (0 = female, 1 = male, 2 = other), or 'dob' (eg. 1990-01-01).
 * **kredits** (https://api.kuggleland.com/1/kredits | Allowed methods: GET). Requires authentication and a profile. This will show you the current kredits balance for the authenticated user.
+* **purposes** (https://api.kuggleland.com/1/purpose | Allowed methods: GET and POST). Requires authentication and a profile. Doing a GET will show the current users last purposes. Required parameters: 'lat' and 'lng' OR 'placeid', 'purpose', and 'type' (Either 'goal', 'help', or 'give')
+* **purpose liking** (https://api.kuggleland.com/1/purpose/PURPOSEID/like | Allowed methods: POST). Requires authentication and a profile. No parameters needed.
+* **purpose disliking** (https://api.kuggleland.com/1/purpose/PURPOSEID/dislike | Allowed methods: POST). Requires authentication and a profile. No parameters needed.
+* **nearby people** (https://api.kuggleland.com/1/nearby/people | Allowed methods: GET). Requires: 'lat' and 'lng' and optionally a 'distance' in meters which defaults to 5000 if left out.
+* **nearby places** (https://api.kuggleland.com/1/nearby/places | Allowed methods: GET). Requires: 'lat' and 'lng' and optionally a 'distance' in meters which defaults to 5000 if left out.
 
 ## Example - User registration
 The below is a typical user journey from unauthenticated to authenticated.
